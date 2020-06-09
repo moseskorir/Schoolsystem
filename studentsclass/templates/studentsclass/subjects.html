@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="table-responsive-sm">
+    <table class="table table-striped">
+        <thead class="thread-dark">
+            <tr>
+                <th>Class</th>
+                <th>Maths</th>
+                <th>English</th>
+                <th>Kiswahili</th>
+                <th>Physics</th>
+                <th>Chemistry</th>
+                <th>Bilogy</th>
+                <th>Social Studies</th>
+                <th>Geography</th>
+                <th>History</th>
+                <th>Business</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subject in subjects %}
+            <tr>
+                <td>{{subject.class}}</td>
+                <td>{{subject.maths}}</td>
+                <td>{{subject.english}}</td>
+                <td>{{subject.kiswahili}}</td>
+                <td>{{subject.physics}}</td>
+                <td>{{subject.chemistry}}</td>
+                <td>{{subject.biology}}</td>
+                <td>{{subject.social_studies}}</td>
+                <td>{{subject.geography}}</td>
+                <td>{{subject.history}}</td>
+                <td>{{subject.business}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
