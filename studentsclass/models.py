@@ -15,7 +15,7 @@ class Subjects(models.Model):
         ('2', 'Two'),
         ('3', 'Three')
     )
-    Student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='school.Student')
     student_class = models.CharField(max_length=30, choices=STUDENTCLASS)
     term = models.CharField(max_length=1, choices=TERM)
     math_subject = models.IntegerField()
